@@ -1,0 +1,83 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 2px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: black;
+}
+
+.chip {
+    position: absolute;
+    width: 40px;
+    bottom: 0;
+}
+
+
+.salto{
+    animation: chip-salto 500ms ease-out;
+
+}
+
+
+
+.pipe {
+    position: absolute;
+    bottom: -40px;
+    width: 80px;
+
+    animation: pipe-animation 1.5s infinite linear; 
+    
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;       
+    }
+
+    to{
+        right: 100%;
+    }
+
+
+}
+
+
+@keyframes chip-salto {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+
+    100% {
+        bottom: 0; 
+    }
+
+}
+
+
+.liga{
+    position: absolute;
+    width: 1000px;
+
+}
